@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before { //margin et padding à 0 sur toutes les pages
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // 10px div by def of 16px
+    font-size: 62.5%;
+    width: 1800px;
+    margin: auto;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 1.7rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+footer {
+    background-color: $color-secondary;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 1.8rem;
+}

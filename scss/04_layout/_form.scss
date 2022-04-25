@@ -1,0 +1,75 @@
+//rechercher
+.searchHosting {
+    & img {
+        width: 25px;
+        margin-right: 10px;
+    }
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold ;
+
+        margin: 20px 0px 20px 0px;
+        padding: 17px;
+
+        width: 300px;
+        height: 51px;
+
+        border-top-left-radius: 1.8rem;
+        border-bottom-left-radius: 1.8rem;
+        background: $color-secondary;
+        & input{
+            padding: 17px;
+            border: .1rem solid $color-secondary;
+            &::placeholder {
+                font-size: 1.7rem;
+            }
+        }
+    }
+    & a {
+        background-color: $color-primary;
+        color: white;
+        margin-right: 10px;
+        padding: 16px;
+        border-top-right-radius: 1.8rem;
+        border-bottom-right-radius: 1.8rem;
+    }
+}
+
+//Hosting
+.hostingBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include hostingBox-size;
+    @include hostingBox;
+    &:hover {
+        animation: ZoomHover 200ms forwards;
+    }
+    img {
+        object-fit: cover;
+        width: $hosting-box-witdh;
+        height: $hosting-box-height*.6;
+        
+        padding: .7rem;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+    }
+    &__description {
+        margin-left: 15px;
+        &--name {
+            font-size: 1.8rem;
+            font-weight: bolder;
+        }
+        &--price {
+            margin: .6rem 0rem .6rem 0rem;
+            font-size: 1.7rem;
+            font-weight: lighter;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}

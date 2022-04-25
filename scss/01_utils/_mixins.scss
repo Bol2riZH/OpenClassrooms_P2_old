@@ -1,0 +1,17 @@
+@mixin hosting_bg {
+    margin: 1.5rem 0rem 1.5rem 0rem;
+    padding: 1.3rem;
+    background-color: $color-secondary;
+    border-radius: 1.3rem;
+}
+
+@mixin hostingBox {
+    background-color: $hostingBox-bg-color;
+    border-radius: 1.5rem;
+    box-shadow: 0rem 0rem .8rem #b3b3b3;
+}
+
+@mixin hostingBox-size {
+    width: $hosting-box-witdh;
+    height: $hosting-box-height;
+}

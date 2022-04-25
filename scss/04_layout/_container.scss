@@ -1,0 +1,19 @@
+.hosting {
+    @include hosting_bg;
+}
+
+.hostingPopular {
+    @include hosting_bg;
+}
+
+.filter {
+    display: flex;
+    margin: 30px 30px 30px 0px;
+    ul {
+        display: flex;
+    }
+    li {
+        margin-left: 30px;
+    }
+}
+

@@ -12,71 +12,87 @@
 
 <body>
     <header>
-        <h1>Booki</h1>
-        
+        <h1><img src="logo\booki_logo.svg" alt="Booki"></h1>
         <nav>
             <ul>
-                <li> <a href="accommodation.html">Hébergement</a></li>
-                <li> <a href="activity.html">Activités</a></li>
-                <li> <a href="subscribe.html">S'incrire</a></li>
+                <li><a href="index.html">Hébergement</a></li>
+                <li><a href="activity.html">Activités</a></li>
+                <li><a href="subscribe.html">S'incrire</a></li>
             </ul>
         </nav>
-
-        <h2>Trouver votre hébergement pour des vacances de rêves</h2>
-        <p>En plein centre ville ou en pleine rue</p>
-
-        <form class="findPlace">
-            <label for="city" >Rechercher</label>
-            <input type="text" name="city" id="city" placeholder="Marseille, France">
-        </form>
-
-        <h3>Filtres</h3>
-
-        <button>Economique</button>
-        <button>Familial</button>
-        <button>Romantique</button>
-        <button>Animaux autorisés</button>
-
-        <p>Plus de 500 logements sont disponibles dans cette ville</p>
     </header>
 
+    <div class="searchHosting">
+        <h2>Trouver votre hébergement pour des vacances de rêve</h2>
+        <p>En plein centre ville ou en pleine rue </br></p>
+        
+        <form class="searchHosting__form">
+            <img src="icone\map.png" alt="map">
+            <input type="text" name="city" id="city" placeholder="Marseille, France">
+            <label for="city"><a href="">Rechercher</a></label>
+        </form>
+
+        <div class="filter">
+            <h3>Filtres</h3>
+            <ul>
+                <li><button>Economique</button></li>
+                <li><button>Familial</button></li>
+                <li><button>Romantique</button></li>
+                <li><button>Animaux autorisés</button></li>
+            </ul>
+        </div>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+    </div>
+        
     <section>
-        <h3>Hébergement à Maseille</h3>
+        <article>
+            <div class="hosting">
+                <h3>Hébergement à Marseille</h3>
+                
+                <form class="hostingBox">
+                    <a href="">
+                        <div class="hostingBox__image">
+                            <img src="img\marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="hosting">
+                        </div>
+                        <div class="hostingBox__description">
+                            <div class="hostingBox__description--name">Auberge la Cannebière</div>
+                            <div class="hostingBox__description--price">Nuit à partir de <span>25€</span></div>
+                        </div>
+                    </a>
+                </form>
+                
+                <a class="MoreHosting" href="">Afficher plus</a>
+            </div>
 
-        <form class="accomodation">
-            <a href="">
-                <input type="button">
-               <div class="accommodation__name">Auberge de la Cannebière</div>
-               <div class="accommodation__name__price">Nuit à partir <span>25€</span></div>
-            </a>
-        </form>
+        </article>
 
+        <aside>
+            <div class="hostingPopular">
+                <h3>Les plus populaire</h3>
+                
+                <form class="popular">
+                    <a href="">
+                        <div class="popular__name">Hôtel Le soleil du matin</div>
+                        <div class="popular__name__price">Nuit à partir de <span>128€</span></div>
+                    </a>
+                </form>
+            </div>
+            
+        </aside>
+
+        <article>
+            <h3>Activités à Marseille</h3>
+    
+            <form class="activity">
+                <a href="">
+                    <input type="button">
+                   <div class="activity__place">Vieux Port</div>
+                </a>
+            </form>
+    
+        </article>
+    
     </section>
-
-    <article>
-        <h3>Les plus populaire</h3>
-
-        <form class="popular">
-            <a href="">
-                <input type="button">
-               <div class="popular__name">Hôtel Le soleil du matin</div>
-               <div class="popular__name__price">Nuit à partir <span>128€</span></div>
-            </a>
-        </form>
-
-    </article>
-
-    <article>
-        <h3>Activités à Marseille</h3>
-
-        <form class="activity">
-            <a href="">
-                <input type="button">
-               <div class="activity__place">Vieux Port</div>
-            </a>
-        </form>
-
-    </article>
 
     <footer>
             <h4>A propos</h4>
