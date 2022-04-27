@@ -9,35 +9,22 @@
 .filter {
     display: flex;
     align-items: center;
-    margin: 30px 0px 25px 0px; //marge haut-bas entre les sections
+    margin: 30px 0px 25px 0px;
     &__button {
-        //margin: 0px 0px 0px 0px; //marge entre les filtres
+        margin-left: 30px;
         display: flex;
+        cursor: pointer;
+        @include filterBox;
         &:hover {
             animation: filterColor 250ms forwards;
         }
-        cursor: pointer;
         img {
-            //position:relative;
-            z-index: 1;
-            left: 37px;
             width: 55px;
         }
         a {
-            @include filterBox;
-            //display: flex;
-            //position: relative;
-            z-index: -1;
-            bottom: 22px;
-            right: 25px;
-            & span {
-                //position: relative;
-                //bottom: 10px;
-                //left: 40px;
-                //padding-right: 35px;
-                font-weight: bold;
-                text-transform: capitalize;
-            }
+            padding: 17px;
+            font-weight: bold;
+            text-transform: capitalize;
         }
     }
 }

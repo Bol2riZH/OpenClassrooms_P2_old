@@ -1,33 +1,33 @@
 //rechercher
 .searchHosting {
-    & img {
-        width: 25px;
-        margin-right: 10px;
-    }
     &__form {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-weight: bold ;
-
+        
         margin: 20px 0px 20px 0px;
         padding: 17px;
-
+        
         width: 300px;
         height: 51px;
-
+        
         border-top-left-radius: 1.8rem;
         border-bottom-left-radius: 1.8rem;
         background: $color-secondary;
-        & input{
+        input{
             padding: 17px;
             border: .1rem solid $color-secondary;
             &::placeholder {
                 font-size: 1.7rem;
             }
         }
+        img {
+            width: 25px;
+            margin-right: 10px;
+        }
     }
-    & label a {
+    label a {
         background-color: $color-primary;
         color: white;
         margin-right: 10px;

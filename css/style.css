@@ -70,10 +70,6 @@ html {
   font-family: "raleway", Arial, Helvetica, sans-serif;
 }
 
-.searchHosting img {
-  width: 25px;
-  margin-right: 10px;
-}
 .searchHosting__form {
   display: flex;
   justify-content: space-between;
@@ -93,6 +89,10 @@ html {
 }
 .searchHosting__form input::placeholder {
   font-size: 1.7rem;
+}
+.searchHosting__form img {
+  width: 25px;
+  margin-right: 10px;
 }
 .searchHosting label a {
   background-color: #0165FC;
@@ -160,26 +160,20 @@ html {
   margin: 30px 0px 25px 0px;
 }
 .filter__button {
+  margin-left: 30px;
   display: flex;
   cursor: pointer;
+  border: 0.19rem solid #bfbfbf;
+  border-radius: 3rem;
 }
 .filter__button:hover {
   animation: filterColor 250ms forwards;
 }
 .filter__button img {
-  z-index: 1;
-  left: 37px;
   width: 55px;
 }
 .filter__button a {
-  border: 0.17rem solid #bfbfbf;
-  border-radius: 3rem;
-  padding: 15px 20px 15px 55px;
-  z-index: -1;
-  bottom: 22px;
-  right: 25px;
-}
-.filter__button a span {
+  padding: 17px;
   font-weight: bold;
   text-transform: capitalize;
 }
