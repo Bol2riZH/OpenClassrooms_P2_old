@@ -27,7 +27,7 @@
             }
         }
     }
-    & a {
+    & label a {
         background-color: $color-primary;
         color: white;
         margin-right: 10px;
@@ -46,7 +46,7 @@
     @include hostingBox-size;
     @include hostingBox;
     &:hover {
-        animation: ZoomHover 200ms forwards;
+        animation: zoomHover 200ms forwards;
     }
     img {
         object-fit: cover;

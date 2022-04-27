@@ -27,9 +27,6 @@ li {
     list-style-type: none;
 }
 
-footer {
-    background-color: $color-secondary;
-}
 
 h2 {
     font-size: 3rem;
@@ -44,4 +41,8 @@ h3 {
 h4 {
     font-weight: bold;
     font-size: 1.8rem;
+}
+
+footer {
+    background-color: $color-secondary;
 }

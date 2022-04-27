@@ -1,8 +1,18 @@
-@keyframes ZoomHover {
+@keyframes zoomHover {
     0% {
         transform: scale(1);
     }
     100% {
         transform: scale(1.02);
+    }
+}
+
+@keyframes filterColor {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.01);
+        background-color: #f3f8ff;
     }
 }

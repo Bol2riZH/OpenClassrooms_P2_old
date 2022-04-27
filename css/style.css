@@ -1,9 +1,18 @@
-@keyframes ZoomHover {
+@keyframes zoomHover {
   0% {
     transform: scale(1);
   }
   100% {
     transform: scale(1.02);
+  }
+}
+@keyframes filterColor {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.01);
+    background-color: #f3f8ff;
   }
 }
 *,
@@ -34,10 +43,6 @@ li {
   list-style-type: none;
 }
 
-footer {
-  background-color: #f2f2f2;
-}
-
 h2 {
   font-size: 3rem;
   font-weight: bolder;
@@ -51,6 +56,10 @@ h3 {
 h4 {
   font-weight: bold;
   font-size: 1.8rem;
+}
+
+footer {
+  background-color: #f2f2f2;
 }
 
 @font-face {
@@ -85,7 +94,7 @@ html {
 .searchHosting__form input::placeholder {
   font-size: 1.7rem;
 }
-.searchHosting a {
+.searchHosting label a {
   background-color: #0165FC;
   color: white;
   margin-right: 10px;
@@ -105,7 +114,7 @@ html {
   box-shadow: 0rem 0rem 0.8rem #b3b3b3;
 }
 .hostingBox:hover {
-  animation: ZoomHover 200ms forwards;
+  animation: zoomHover 200ms forwards;
 }
 .hostingBox img {
   object-fit: cover;
@@ -147,13 +156,32 @@ html {
 
 .filter {
   display: flex;
-  margin: 30px 30px 30px 0px;
+  align-items: center;
+  margin: 30px 0px 25px 0px;
 }
-.filter ul {
+.filter__button {
   display: flex;
+  cursor: pointer;
 }
-.filter li {
-  margin-left: 30px;
+.filter__button:hover {
+  animation: filterColor 250ms forwards;
+}
+.filter__button img {
+  z-index: 1;
+  left: 37px;
+  width: 55px;
+}
+.filter__button a {
+  border: 0.17rem solid #bfbfbf;
+  border-radius: 3rem;
+  padding: 15px 20px 15px 55px;
+  z-index: -1;
+  bottom: 22px;
+  right: 25px;
+}
+.filter__button a span {
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 header {

@@ -15,3 +15,9 @@
     width: $hosting-box-witdh;
     height: $hosting-box-height;
 }
+
+@mixin filterBox {
+    border: .17rem solid darken($color-secondary, 20);
+    border-radius: 3rem;
+    padding: 15px 20px 15px 55px;
+}
