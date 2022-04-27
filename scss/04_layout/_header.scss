@@ -3,28 +3,23 @@ header {
     justify-content: space-between;
     font-size: 1.7rem;
     margin-bottom: 35px;
-}
-
-header img {
-    width: 35%;
-    margin-top: 25px;
-}
-
-header ul {
-    display: flex;
-    margin-top: 35px;
-}
-
-header a {
-    padding: 0px 30px 0px 30px;
-    &:visited {
-        color: $color-primary;
-        border-top: .3rem solid $color-primary;
-        padding-top: 31px;
+    img {
+        width: 35%;
     }
-    &:hover {
-        color: $color-primary;
-        border-top: .3rem solid $color-primary;
-        padding-top: 33px;
+    ul {
+        display: flex;
+    }
+    a {
+        padding: 0px 30px 0px 30px;
+        &:visited {
+            color: $color-primary;
+            border-top: .3rem solid $color-primary;
+            padding-top: 31px;
+        }
+        &:hover {
+            color: $color-primary;
+            border-top: .3rem solid $color-primary;
+            padding-top: 27px;
+        }
     }
 }

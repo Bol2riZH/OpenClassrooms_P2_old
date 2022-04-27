@@ -12,7 +12,7 @@
   }
   100% {
     transform: scale(1.01);
-    background-color: #f3f8ff;
+    background-color: #f3F8ff;
   }
 }
 *,
@@ -25,13 +25,14 @@
 
 html {
   font-size: 62.5%;
-  width: 1800px;
+  width: 100%;
   margin: auto;
 }
 
 body {
   box-sizing: border-box;
   font-size: 1.7rem;
+  margin: 30px;
 }
 
 a {
@@ -46,7 +47,6 @@ li {
 h2 {
   font-size: 3rem;
   font-weight: bolder;
-  margin-bottom: 5px;
 }
 
 h3 {
@@ -70,12 +70,82 @@ html {
   font-family: "raleway", Arial, Helvetica, sans-serif;
 }
 
+button {
+  border: none;
+}
+
+.moreHosting {
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+.searchHosting {
+  margin-bottom: 30px;
+}
+.searchHosting .subtitle {
+  margin-bottom: 30px;
+}
+.searchHosting .subtitle h2 {
+  margin-bottom: 5px;
+}
+
 .searchHosting__form {
+  margin-bottom: 30px;
+}
+
+.information {
+  margin-top: 30px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 30px;
+}
+section article {
+  padding: 1.3rem;
+  background-color: #f2f2f2;
+  border-radius: 1.3rem;
+  flex: 2;
+}
+section article h3 {
+  margin-bottom: 15px;
+}
+section article .hosting {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 30px;
+}
+section aside {
+  padding: 1.3rem;
+  background-color: #f2f2f2;
+  border-radius: 1.3rem;
+  flex: 1;
+}
+section aside .titlePopular {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
+}
+section aside .titlePopular img {
+  height: 18px;
+}
+section aside .hostingPopular {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.searchHosting__form {
+  display: flex;
+  align-items: center;
   font-weight: bold;
-  margin: 20px 0px 20px 0px;
   padding: 17px;
   width: 300px;
   height: 51px;
@@ -86,9 +156,8 @@ html {
 .searchHosting__form input {
   padding: 17px;
   border: 0.1rem solid #f2f2f2;
-}
-.searchHosting__form input::placeholder {
   font-size: 1.7rem;
+  outline: none;
 }
 .searchHosting__form img {
   width: 25px;
@@ -103,26 +172,62 @@ html {
   border-bottom-right-radius: 1.8rem;
 }
 
-.hostingBox {
+.filter {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+}
+.filter__button {
+  border: 0.19rem solid #bfbfbf;
+  border-radius: 3rem;
+  display: flex;
+  cursor: pointer;
+}
+.filter__button:hover {
+  animation: filterColor 250ms forwards;
+}
+.filter__button img {
+  width: 55px;
+}
+.filter__button a {
+  padding: 16px;
+  font-weight: bold;
+}
+.filter__button a::first-letter {
+  text-transform: uppercase;
+}
+
+.information {
+  display: flex;
+  align-items: center;
+}
+.information img {
+  margin-right: 15px;
+}
+
+.hostingBox {
   width: 260px;
-  height: 210px;
+  height: fit-content;
   background-color: white;
   border-radius: 1.5rem;
   box-shadow: 0rem 0rem 0.8rem #b3b3b3;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.hostingBox:hover {
-  animation: zoomHover 200ms forwards;
-}
-.hostingBox img {
+.hostingBox__hostelImage img {
   object-fit: cover;
+  justify-content: center;
   width: 260px;
   height: 126px;
   padding: 0.7rem;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
+}
+.hostingBox:hover {
+  animation: zoomHover 200ms forwards;
 }
 .hostingBox__description {
   margin-left: 15px;
@@ -139,43 +244,50 @@ html {
 .hostingBox__description--price span {
   font-weight: bold;
 }
-
-.hosting {
-  margin: 1.5rem 0rem 1.5rem 0rem;
-  padding: 1.3rem;
-  background-color: #f2f2f2;
-  border-radius: 1.3rem;
-}
-
-.hostingPopular {
-  margin: 1.5rem 0rem 1.5rem 0rem;
-  padding: 1.3rem;
-  background-color: #f2f2f2;
-  border-radius: 1.3rem;
-}
-
-.filter {
+.hostingBox__description--rate {
   display: flex;
+}
+
+.popularBox {
+  width: 260px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0rem 0rem 0.8rem #b3b3b3;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 30px 0px 25px 0px;
 }
-.filter__button {
-  margin-left: 30px;
-  display: flex;
-  cursor: pointer;
-  border: 0.19rem solid #bfbfbf;
-  border-radius: 3rem;
+.popularBox__hostelImage img {
+  object-fit: cover;
+  justify-content: center;
+  width: 260px;
+  height: 126px;
+  padding: 0.7rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
-.filter__button:hover {
-  animation: filterColor 250ms forwards;
+.popularBox:hover {
+  animation: zoomHover 200ms forwards;
 }
-.filter__button img {
-  width: 55px;
+.popularBox__description {
+  margin-left: 15px;
 }
-.filter__button a {
-  padding: 17px;
+.popularBox__description--name {
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+.popularBox__description--price {
+  margin: 0.6rem 0rem 0.6rem 0rem;
+  font-size: 1.7rem;
+  font-weight: lighter;
+}
+.popularBox__description--price span {
   font-weight: bold;
-  text-transform: capitalize;
+}
+.popularBox__description--rate {
+  display: flex;
 }
 
 header {
@@ -184,17 +296,12 @@ header {
   font-size: 1.7rem;
   margin-bottom: 35px;
 }
-
 header img {
   width: 35%;
-  margin-top: 25px;
 }
-
 header ul {
   display: flex;
-  margin-top: 35px;
 }
-
 header a {
   padding: 0px 30px 0px 30px;
 }
@@ -206,7 +313,7 @@ header a:visited {
 header a:hover {
   color: #0165FC;
   border-top: 0.3rem solid #0165FC;
-  padding-top: 33px;
+  padding-top: 27px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,20 +1,12 @@
-.hosting {
-    @include hosting_bg;
-}
-
-.hostingPopular {
-    @include hosting_bg;
-}
-
 .filter {
     display: flex;
     align-items: center;
-    margin: 30px 0px 25px 0px;
+    flex-wrap: wrap;
+    gap: 10px 30px;
     &__button {
-        margin-left: 30px;
+        @include filterBox;
         display: flex;
         cursor: pointer;
-        @include filterBox;
         &:hover {
             animation: filterColor 250ms forwards;
         }
@@ -22,9 +14,105 @@
             width: 55px;
         }
         a {
-            padding: 17px;
+            padding: 16px;
             font-weight: bold;
-            text-transform: capitalize;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.information {
+    display: flex;
+    align-items: center;
+    img {
+        margin-right: 15px;
+    }
+}
+
+.hostingBox {
+    @include hostingBox-size;
+    @include hostingBox;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+
+    &__hostelImage {
+        img {
+            object-fit: cover;
+            justify-content: center;
+            width: $hosting-box-witdh;
+            height: $hosting-box-height*.6;
+            
+            padding: .7rem;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+    }
+    &:hover {
+        animation: zoomHover 200ms forwards;
+    }
+    &__description {
+        margin-left: 15px;
+        &--name {
+            font-size: 1.8rem;
+            font-weight: bolder;
+        }
+        &--price {
+            margin: .6rem 0rem .6rem 0rem;
+            font-size: 1.7rem;
+            font-weight: lighter;
+            span {
+                font-weight: bold;
+            }
+        }
+        &--rate {
+            display: flex;
+        }
+    }
+}
+
+.popularBox {
+    @include hostingBox-size;
+    @include hostingBox;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+
+    &__hostelImage {
+        img {
+            object-fit: cover;
+            justify-content: center;
+            width: $popular-box-witdh;
+            height: $popular-box-height*.6;
+            
+            padding: .7rem;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+    }
+    &:hover {
+        animation: zoomHover 200ms forwards;
+    }
+    &__description {
+        margin-left: 15px;
+        &--name {
+            font-size: 1.8rem;
+            font-weight: bolder;
+        }
+        &--price {
+            margin: .6rem 0rem .6rem 0rem;
+            font-size: 1.7rem;
+            font-weight: lighter;
+            span {
+                font-weight: bold;
+            }
+        }
+        &--rate {
+            display: flex;
         }
     }
 }

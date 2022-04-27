@@ -1,5 +1,4 @@
 @mixin hosting_bg {
-    margin: 1.5rem 0rem 1.5rem 0rem;
     padding: 1.3rem;
     background-color: $color-secondary;
     border-radius: 1.3rem;
@@ -9,13 +8,18 @@
     background-color: $hostingBox-bg-color;
     border-radius: 1.5rem;
     box-shadow: 0rem 0rem .8rem #b3b3b3;
+    padding-bottom: 1rem;
 }
 
 @mixin hostingBox-size {
     width: $hosting-box-witdh;
-    height: $hosting-box-height;
+    height: fit-content;
 }
 
+@mixin popularBox-size {
+    width: $hosting-box-witdh;
+    height: fit-content;
+}
 @mixin filterBox {
     border: .19rem solid darken($color-secondary, 20);
     border-radius: 3rem;

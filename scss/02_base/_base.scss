@@ -1,6 +1,6 @@
 *,
 *::after,
-*::before { //margin et padding à 0 sur toutes les pages
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -9,13 +9,14 @@
 html {
     // 10px div by def of 16px
     font-size: 62.5%;
-    width: 1800px;
+    width: 100%;
     margin: auto;
 }
 
 body {
     box-sizing: border-box;
     font-size: 1.7rem;
+    margin: 30px;
 }
 
 a {
@@ -31,7 +32,6 @@ li {
 h2 {
     font-size: 3rem;
     font-weight: bolder;
-    margin-bottom: 5px;
 }
 
 h3 {

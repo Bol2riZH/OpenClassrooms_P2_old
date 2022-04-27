@@ -1,0 +1,58 @@
+header {
+    margin-bottom: 30px;
+}
+
+.searchHosting {
+    margin-bottom: 30px;
+    .subtitle {
+        margin-bottom: 30px;
+        h2 {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.searchHosting__form {
+    margin-bottom: 30px;
+}
+
+.information {
+    margin-top: 30px;
+} 
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 30px;
+    article {
+        @include hosting_bg;
+        flex: 2;
+        h3 {
+            margin-bottom: 15px;
+        }
+        .hosting {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px 30px;
+        }
+        
+    }
+    aside { 
+        @include hosting_bg;
+        flex: 1;
+        .titlePopular {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            img {
+                height: 18px;
+            }
+        }
+        .hostingPopular {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+}
