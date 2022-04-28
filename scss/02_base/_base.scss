@@ -9,14 +9,14 @@
 html {
     // 10px div by def of 16px
     font-size: 62.5%;
-    width: 100%;
+    width: 1490px; //Définit la taille de base de la page
     margin: auto;
 }
 
 body {
     box-sizing: border-box;
     font-size: 1.7rem;
-    margin: 30px;
+    margin-top: 50px; //marge en haut
 }
 
 a {

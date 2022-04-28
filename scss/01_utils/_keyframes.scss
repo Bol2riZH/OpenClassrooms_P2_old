@@ -1,3 +1,4 @@
+//Zoom sur les vignettes sur un hover
 @keyframes zoomHover {
     0% {
         transform: scale(1);
@@ -7,6 +8,7 @@
     }
 }
 
+//Changement de couleur du boutton filtre sur un hover
 @keyframes filterColor {
     0% {
         transform: scale(1);

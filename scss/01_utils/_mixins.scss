@@ -1,25 +1,31 @@
-@mixin hosting_bg {
-    padding: 1.3rem;
+//background article et aside
+@mixin section_bg {
+    padding: 35px;
     background-color: $color-secondary;
     border-radius: 1.3rem;
 }
 
+//background des vignettes hosting et popular hosting
 @mixin hostingBox {
     background-color: $hostingBox-bg-color;
-    border-radius: 1.5rem;
+    border-radius: 1.8rem;
     box-shadow: 0rem 0rem .8rem #b3b3b3;
-    padding-bottom: 1rem;
+    padding: .6rem;
 }
 
+//taille des vignettes hosting
 @mixin hostingBox-size {
-    width: $hosting-box-witdh;
+    width: fit-content;
     height: fit-content;
 }
 
+//taille des vignettes popular hosting
 @mixin popularBox-size {
-    width: $hosting-box-witdh;
+    width: $popular-box-witdh;
     height: fit-content;
 }
+
+//forme des bouttons de filtres
 @mixin filterBox {
     border: .19rem solid darken($color-secondary, 20);
     border-radius: 3rem;

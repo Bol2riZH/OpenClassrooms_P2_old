@@ -25,14 +25,14 @@
 
 html {
   font-size: 62.5%;
-  width: 100%;
+  width: 1490px;
   margin: auto;
 }
 
 body {
   box-sizing: border-box;
   font-size: 1.7rem;
-  margin: 30px;
+  margin-top: 50px;
 }
 
 a {
@@ -108,13 +108,13 @@ section {
   gap: 30px 30px;
 }
 section article {
-  padding: 1.3rem;
+  padding: 35px;
   background-color: #f2f2f2;
   border-radius: 1.3rem;
-  flex: 2;
+  width: 950px;
 }
 section article h3 {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 section article .hosting {
   display: flex;
@@ -122,16 +122,15 @@ section article .hosting {
   gap: 30px 30px;
 }
 section aside {
-  padding: 1.3rem;
+  padding: 35px;
   background-color: #f2f2f2;
   border-radius: 1.3rem;
-  flex: 1;
 }
 section aside .titlePopular {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin: 0px 10px 30px 10px;
 }
 section aside .titlePopular img {
   height: 18px;
@@ -139,24 +138,25 @@ section aside .titlePopular img {
 section aside .hostingPopular {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
 
 .searchHosting__form {
   display: flex;
   align-items: center;
-  font-weight: bold;
-  padding: 17px;
   width: 300px;
   height: 51px;
   border-top-left-radius: 1.8rem;
   border-bottom-left-radius: 1.8rem;
   background: #f2f2f2;
+  padding: 17px;
+  font-weight: bold;
 }
 .searchHosting__form input {
-  padding: 17px;
   border: 0.1rem solid #f2f2f2;
   font-size: 1.7rem;
+  padding: 17px;
   outline: none;
 }
 .searchHosting__form img {
@@ -164,12 +164,12 @@ section aside .hostingPopular {
   margin-right: 10px;
 }
 .searchHosting label a {
+  border-top-right-radius: 1.8rem;
+  border-bottom-right-radius: 1.8rem;
   background-color: #0165FC;
   color: white;
   margin-right: 10px;
   padding: 16px;
-  border-top-right-radius: 1.8rem;
-  border-bottom-right-radius: 1.8rem;
 }
 
 .filter {
@@ -207,27 +207,26 @@ section aside .hostingPopular {
 }
 
 .hostingBox {
-  width: 260px;
+  width: fit-content;
   height: fit-content;
   background-color: white;
-  border-radius: 1.5rem;
+  border-radius: 1.8rem;
   box-shadow: 0rem 0rem 0.8rem #b3b3b3;
-  padding-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.hostingBox__hostelImage img {
-  object-fit: cover;
-  justify-content: center;
-  width: 260px;
-  height: 126px;
-  padding: 0.7rem;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
+  padding: 0.6rem;
 }
 .hostingBox:hover {
   animation: zoomHover 200ms forwards;
+}
+.hostingBox__layout {
+  display: flex;
+  flex-direction: column;
+}
+.hostingBox__hostelImage img {
+  object-fit: cover;
+  width: 260px;
+  height: 126px;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 .hostingBox__description {
   margin-left: 15px;
@@ -237,7 +236,7 @@ section aside .hostingPopular {
   font-weight: bolder;
 }
 .hostingBox__description--price {
-  margin: 0.6rem 0rem 0.6rem 0rem;
+  margin: 4px 0px 4px 0px;
   font-size: 1.7rem;
   font-weight: lighter;
 }
@@ -249,37 +248,39 @@ section aside .hostingPopular {
 }
 
 .popularBox {
-  width: 260px;
+  width: 380px;
   height: fit-content;
   background-color: white;
-  border-radius: 1.5rem;
+  border-radius: 1.8rem;
   box-shadow: 0rem 0rem 0.8rem #b3b3b3;
-  padding-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.popularBox__hostelImage img {
-  object-fit: cover;
-  justify-content: center;
-  width: 260px;
-  height: 126px;
-  padding: 0.7rem;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
+  padding: 0.6rem;
 }
 .popularBox:hover {
   animation: zoomHover 200ms forwards;
 }
-.popularBox__description {
-  margin-left: 15px;
+.popularBox__layout {
+  display: flex;
+}
+.popularBox__hostelImage img {
+  object-fit: cover;
+  width: 114px;
+  height: 120px;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+.popularBox__description--layout {
+  margin-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .popularBox__description--name {
   font-size: 1.8rem;
   font-weight: bolder;
 }
 .popularBox__description--price {
-  margin: 0.6rem 0rem 0.6rem 0rem;
+  margin-top: 4px;
   font-size: 1.7rem;
   font-weight: lighter;
 }

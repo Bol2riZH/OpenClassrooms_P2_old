@@ -1,3 +1,4 @@
+//AGENCEMENT DU HAUT DE PAGE
 header {
     margin-bottom: 30px;
 }
@@ -20,15 +21,16 @@ header {
     margin-top: 30px;
 } 
 
+//AGENCEMENT DE LA SECTION
 section {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px 30px;
+    gap: 30px 30px; //espace entre les vignettes
     article {
-        @include hosting_bg;
-        flex: 2;
+        @include section_bg;
+        width: 950px; //taille assigner à l'article
         h3 {
-            margin-bottom: 15px;
+            margin-bottom: 30px;
         }
         .hosting {
             display: flex;
@@ -38,13 +40,12 @@ section {
         
     }
     aside { 
-        @include hosting_bg;
-        flex: 1;
+        @include section_bg;
         .titlePopular {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
+            margin: 0px 10px 30px 10px;
             img {
                 height: 18px;
             }
@@ -52,6 +53,7 @@ section {
         .hostingPopular {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 30px;
         }
     }

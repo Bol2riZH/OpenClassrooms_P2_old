@@ -1,3 +1,4 @@
+//BOUTTON FILTRE
 .filter {
     display: flex;
     align-items: center;
@@ -23,6 +24,7 @@
     }
 }
 
+// INFORMATION
 .information {
     display: flex;
     align-items: center;
@@ -31,37 +33,34 @@
     }
 }
 
+//VIGNETTE HOSTING (article)
 .hostingBox {
     @include hostingBox-size;
     @include hostingBox;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-
+    &:hover {
+        animation: zoomHover 200ms forwards;
+    }
+    &__layout {
+        display: flex;
+        flex-direction: column;
+    }
     &__hostelImage {
         img {
-            object-fit: cover;
-            justify-content: center;
+            object-fit: cover; // cover : image non déformée
             width: $hosting-box-witdh;
-            height: $hosting-box-height*.6;
-            
-            padding: .7rem;
+            height: $hosting-box-height*.6; //taille de l'image en fonction de la taille de la vignette
             border-top-left-radius: 1.5rem;
             border-top-right-radius: 1.5rem;
         }
     }
-    &:hover {
-        animation: zoomHover 200ms forwards;
-    }
     &__description {
-        margin-left: 15px;
+        margin-left: 15px; //marge entre le texte et l'image
         &--name {
             font-size: 1.8rem;
             font-weight: bolder;
         }
         &--price {
-            margin: .6rem 0rem .6rem 0rem;
+            margin: 4px 0px 4px 0px; //marge entre les textes de description
             font-size: 1.7rem;
             font-weight: lighter;
             span {
@@ -74,37 +73,39 @@
     }
 }
 
+//VIGNETTE HOSTING POPULAR (aside) 
 .popularBox {
-    @include hostingBox-size;
+    @include popularBox-size;
     @include hostingBox;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-
-    &__hostelImage {
-        img {
-            object-fit: cover;
-            justify-content: center;
-            width: $popular-box-witdh;
-            height: $popular-box-height*.6;
-            
-            padding: .7rem;
-            border-top-left-radius: 1.5rem;
-            border-top-right-radius: 1.5rem;
-        }
-    }
     &:hover {
         animation: zoomHover 200ms forwards;
     }
+    &__layout {
+        display: flex;
+    }
+    &__hostelImage {
+        img {
+            object-fit: cover; // cover : image non déformée
+            width: $popular-box-witdh*.30; //taille de l'image en fonction de la taille de la vignette
+            height: $popular-box-height;
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+        }
+    }
     &__description {
-        margin-left: 15px;
+        &--layout {
+            margin-left: 10px; //marge à gauche de l'image
+            padding-right: 10px; //marge à droite de la vignette
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
         &--name {
             font-size: 1.8rem;
             font-weight: bolder;
         }
         &--price {
-            margin: .6rem 0rem .6rem 0rem;
+            margin-top: 4px; //marge entre la description et le prix
             font-size: 1.7rem;
             font-weight: lighter;
             span {
