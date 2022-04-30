@@ -25,7 +25,7 @@
 
 html {
   font-size: 62.5%;
-  width: 100%;
+  width: 1490px;
   margin: auto;
 }
 
@@ -152,6 +152,7 @@ section aside .hostingPopular {
   grid-template-columns: repeat(4, 320px);
   grid-template-rows: 295px;
   grid-gap: 30px;
+  margin-bottom: 60px;
 }
 .activity_1 {
   grid-column: 1;
@@ -177,7 +178,14 @@ section aside .hostingPopular {
 }
 
 footer {
-  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0px 40px 0px;
+  line-height: 40px;
+}
+footer li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .searchHosting__form {
@@ -399,6 +407,9 @@ footer {
   padding: 15px 0px 15px 0px;
   font-size: 1.8rem;
   font-weight: bolder;
+}
+.activityBoxSmall__description::first-letter {
+  text-transform: uppercase;
 }
 
 header {

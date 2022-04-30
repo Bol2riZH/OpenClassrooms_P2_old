@@ -182,5 +182,8 @@
         padding: 15px 0px 15px 0px;
         font-size: 1.8rem;
         font-weight: bolder;
+        &::first-letter {
+            text-transform: uppercase;
+        }
     }
 }
