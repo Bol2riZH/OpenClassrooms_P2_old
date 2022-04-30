@@ -1,3 +1,9 @@
+//forme des bouttons de filtres
+@mixin filterBox {
+    border: .19rem solid darken($color-secondary, 20);
+    border-radius: 3rem;
+}
+
 //background article et aside
 @mixin section_bg {
     padding: 35px;
@@ -22,11 +28,24 @@
 //taille des vignettes popular hosting
 @mixin popularBox-size {
     width: $popular-box-witdh;
-    height: fit-content;
+    height: fit-content; //taille de la vignette en fonction de la hauteur de l'image
 }
 
-//forme des bouttons de filtres
-@mixin filterBox {
-    border: .19rem solid darken($color-secondary, 20);
-    border-radius: 3rem;
+//background des vignettes activité
+@mixin activityBox {
+    background-color: $hostingBox-bg-color;
+    border-radius: 1.8rem;
+    box-shadow: 0rem 0rem .8rem #b3b3b3;
+}
+
+//taille des vignettes activité
+@mixin activityBox-size {
+    width: $activity-box-witdh;
+    height: fit-content; //taille de la vignette en fonction de la hauteur de l'image
+}
+
+//permet la variation des hauteurs de vignettes activité
+@mixin activityBox-variation-size ($height) {
+    width: $activity-box-witdh;
+    height: $height;
 }

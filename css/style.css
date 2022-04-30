@@ -25,14 +25,14 @@
 
 html {
   font-size: 62.5%;
-  width: 1490px;
+  width: 100%;
   margin: auto;
 }
 
 body {
   box-sizing: border-box;
   font-size: 1.7rem;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 a {
@@ -106,6 +106,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 30px 30px;
+  margin-bottom: 30px;
 }
 section article {
   padding: 35px;
@@ -140,6 +141,43 @@ section aside .hostingPopular {
   flex-direction: column;
   align-items: center;
   gap: 30px;
+}
+
+.activityTitle {
+  margin-bottom: 30px;
+}
+
+.activity {
+  display: grid;
+  grid-template-columns: repeat(4, 320px);
+  grid-template-rows: 295px;
+  grid-gap: 30px;
+}
+.activity_1 {
+  grid-column: 1;
+}
+.activity_2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.activity_3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.activity_4 {
+  grid-column: 3;
+}
+.activity_5 {
+  grid-column: 4;
+  grid-row: 1;
+}
+.activity_6 {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+footer {
+  margin-top: 30px;
 }
 
 .searchHosting__form {
@@ -289,6 +327,78 @@ section aside .hostingPopular {
 }
 .popularBox__description--rate {
   display: flex;
+}
+
+.activityBoxBig {
+  width: 320px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 1.8rem;
+  box-shadow: 0rem 0rem 0.8rem #b3b3b3;
+}
+.activityBoxBig:hover {
+  animation: zoomHover 200ms forwards;
+}
+.activityBoxBig__Image img {
+  width: 320px;
+  height: 490px;
+  object-fit: cover;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+.activityBoxBig__description {
+  margin-left: 15px;
+  padding: 15px 0px 15px 0px;
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+.activityBoxMiddle {
+  width: 320px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 1.8rem;
+  box-shadow: 0rem 0rem 0.8rem #b3b3b3;
+}
+.activityBoxMiddle:hover {
+  animation: zoomHover 200ms forwards;
+}
+.activityBoxMiddle__Image img {
+  width: 320px;
+  height: 230px;
+  object-fit: cover;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+.activityBoxMiddle__description {
+  margin-left: 15px;
+  padding: 15px 0px 15px 0px;
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+.activityBoxSmall {
+  width: 320px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 1.8rem;
+  box-shadow: 0rem 0rem 0.8rem #b3b3b3;
+}
+.activityBoxSmall:hover {
+  animation: zoomHover 200ms forwards;
+}
+.activityBoxSmall__Image img {
+  width: 320px;
+  height: 165px;
+  object-fit: cover;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+.activityBoxSmall__description {
+  margin-left: 15px;
+  padding: 15px 0px 15px 0px;
+  font-size: 1.8rem;
+  font-weight: bolder;
 }
 
 header {

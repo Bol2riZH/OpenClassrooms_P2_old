@@ -26,6 +26,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 30px 30px; //espace entre les vignettes
+    margin-bottom: 30px;
     article {
         @include section_bg;
         width: 950px; //taille assigner à l'article
@@ -57,4 +58,41 @@ section {
             gap: 30px;
         }
     }
+}
+.activityTitle {
+    margin-bottom: 30px;
+}
+
+.activity {
+    display: grid; //les vignettes activité sont placées avec la méthodes grid
+    grid-template-columns: repeat(4, $activity-box-witdh);
+    grid-template-rows: 295px;
+    grid-gap: 30px;
+    &_1 {
+        grid-column: 1;
+    }
+    &_2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    &_3 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    &_4 {
+        grid-column: 3;
+    }
+    &_5 {
+        grid-column: 4;
+        grid-row: 1;
+    }
+    &_6 {
+        grid-column: 4 ;
+        grid-row: 2;
+    }
+
+}
+
+footer {
+    margin-top: 30px;
 }
