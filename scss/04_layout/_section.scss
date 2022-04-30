@@ -24,8 +24,9 @@ header {
 //AGENCEMENT DE LA SECTION
 section {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px 30px; //espace entre les vignettes
+    gap: 30px; //espace entre les vignettes
     margin-bottom: 30px;
     article {
         @include section_bg;
@@ -65,9 +66,10 @@ section {
 
 .activity {
     display: grid; //les vignettes activité sont placées avec la méthodes grid
-    grid-template-columns: repeat(4, $activity-box-witdh);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 295px;
     grid-gap: 30px;
+    //grid-column-gap: 30px;
 
     margin-bottom: 60px;
     &_1 {
@@ -92,7 +94,6 @@ section {
         grid-column: 4 ;
         grid-row: 2;
     }
-
 }
 
 footer {

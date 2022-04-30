@@ -25,7 +25,7 @@
 
 html {
   font-size: 62.5%;
-  width: 1490px;
+  width: 1440px;
   margin: auto;
 }
 
@@ -104,8 +104,9 @@ header {
 
 section {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px 30px;
+  gap: 30px;
   margin-bottom: 30px;
 }
 section article {
@@ -149,7 +150,7 @@ section aside .hostingPopular {
 
 .activity {
   display: grid;
-  grid-template-columns: repeat(4, 320px);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 295px;
   grid-gap: 30px;
   margin-bottom: 60px;
@@ -338,7 +339,7 @@ footer li a:hover {
 }
 
 .activityBoxBig {
-  width: 320px;
+  width: 335px;
   height: fit-content;
   background-color: white;
   border-radius: 1.8rem;
@@ -348,7 +349,7 @@ footer li a:hover {
   animation: zoomHover 200ms forwards;
 }
 .activityBoxBig__Image img {
-  width: 320px;
+  width: 335px;
   height: 490px;
   object-fit: cover;
   border-top-left-radius: 1.5rem;
@@ -362,7 +363,7 @@ footer li a:hover {
 }
 
 .activityBoxMiddle {
-  width: 320px;
+  width: 335px;
   height: fit-content;
   background-color: white;
   border-radius: 1.8rem;
@@ -372,7 +373,7 @@ footer li a:hover {
   animation: zoomHover 200ms forwards;
 }
 .activityBoxMiddle__Image img {
-  width: 320px;
+  width: 335px;
   height: 230px;
   object-fit: cover;
   border-top-left-radius: 1.5rem;
@@ -386,7 +387,7 @@ footer li a:hover {
 }
 
 .activityBoxSmall {
-  width: 320px;
+  width: 335px;
   height: fit-content;
   background-color: white;
   border-radius: 1.8rem;
@@ -396,7 +397,7 @@ footer li a:hover {
   animation: zoomHover 200ms forwards;
 }
 .activityBoxSmall__Image img {
-  width: 320px;
+  width: 335px;
   height: 165px;
   object-fit: cover;
   border-top-left-radius: 1.5rem;
