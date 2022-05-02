@@ -2,6 +2,12 @@
 @mixin filterBox {
     border: .19rem solid darken($color-secondary, 20);
     border-radius: 3rem;
+    @include tablet {
+        width: 400px;
+    }
+    @include mobile-only {
+        width: 100%;
+    }
 }
 
 //background article et aside
@@ -19,16 +25,13 @@
     padding: .6rem;
 }
 
-//taille des vignettes hosting
-@mixin hostingBox-size {
-    width: fit-content;
-    height: fit-content;
-}
-
 //taille des vignettes popular hosting
 @mixin popularBox-size {
     width: $popular-box-witdh;
     height: fit-content; //taille de la vignette en fonction de la hauteur de l'image
+    @include laptopL {
+        width: 80%;
+    }
 }
 
 //background des vignettes activité
@@ -48,4 +51,23 @@
 @mixin activityBox-variation-size ($height) {
     width: $activity-box-witdh;
     height: $height;
+}
+
+//media queries
+@mixin laptopL {
+    @media screen and (max-width: map-get($breakpoints, laptopL)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
 }

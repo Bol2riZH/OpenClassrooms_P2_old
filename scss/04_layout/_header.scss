@@ -4,8 +4,19 @@ header {
     justify-content: space-between;
     font-size: 1.7rem;
     margin-bottom: 35px;
+    @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     img {
         width: 35%;
+        @include mobile-only {
+            width: 100%;
+        }
+        @include tablet {
+            width: 100%;
+        }
     }
     ul {
         display: flex;
@@ -21,6 +32,9 @@ header {
             color: $color-primary;
             border-top: .3rem solid $color-primary;
             padding-top: 27px;
+            @include tablet {
+                border: none;
+            }
         }
     }
 }

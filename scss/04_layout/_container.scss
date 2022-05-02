@@ -1,8 +1,15 @@
 //BOUTTON FILTRE
 .filter {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+    align-items: center;
+    @include tablet {
+        flex-direction: column;
+        align-items: flex-start;
+        img {
+            width: 20px;
+        }
+    }
     gap: 10px 30px;
     &__button {
         @include filterBox;
@@ -13,9 +20,15 @@
         }
         img {
             width: 55px;
+            @include mobile-only {
+                width: 20px;
+            }
         }
         a {
             padding: 16px;
+            @include mobile-only {
+                padding: 5px;
+            }
             font-weight: bold;
             &::first-letter {
                 text-transform: uppercase;
@@ -35,7 +48,6 @@
 
 //VIGNETTE HOSTING (article)
 .hostingBox {
-    @include hostingBox-size;
     @include hostingBox;
     &:hover {
         animation: zoomHover 200ms forwards;
@@ -128,6 +140,9 @@
     &__Image {
         img {
             @include activityBox-variation-size($activity-box-height-big); //taille de l'image en donnée entrée
+            @include laptopL {
+                @include activityBox-variation-size(210px);
+            }
             object-fit: cover; // cover : image non déformée
             border-top-left-radius: 1.5rem;
             border-top-right-radius: 1.5rem;
@@ -150,6 +165,9 @@
     &__Image {
         img {
             @include activityBox-variation-size($activity-box-height-middle); //taille de l'image en donnée entrée
+            @include laptopL {
+                @include activityBox-variation-size(210px);
+            }
             object-fit: cover; // cover : image non déformée
             border-top-left-radius: 1.5rem;
             border-top-right-radius: 1.5rem;
@@ -172,6 +190,9 @@
     &__Image {
         img {
             @include activityBox-variation-size($activity-box-height-small); //taille de l'image en donnée entrée
+            @include laptopL {
+                @include activityBox-variation-size(210px);
+            }
             object-fit: cover; // cover : image non déformée
             border-top-left-radius: 1.5rem;
             border-top-right-radius: 1.5rem;

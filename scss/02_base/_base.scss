@@ -6,17 +6,25 @@
     box-sizing: inherit;
 }
 
+
 html {
     // 10px div by def of 16px
     font-size: 62.5%;
     width: 1440px; //Définit la taille de base de la page
     margin: auto;
+    @include laptopL {
+        width: 100%;
+        margin: auto;
+    }
 }
 
 body {
     box-sizing: border-box;
     font-size: 1.7rem;
-    margin-top: 30px; //marge en haut
+    margin-top: 30px;
+    @include laptopL {
+        margin: 30px 30px 0px 30px;
+    }
 }
 
 a {
@@ -30,7 +38,7 @@ li {
 
 
 h2 {
-    font-size: 3rem;
+    font-size: min(3.5vw, 30px);
     font-weight: bolder;
 }
 
