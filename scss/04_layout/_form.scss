@@ -11,18 +11,17 @@
         border-bottom-left-radius: 1.8rem;
 
         background: $color-secondary;
-        padding: 17px;
+        padding: 24px;
         font-weight: bold ;
         input{
             border: .1rem solid $color-secondary;
             font-size: 1.7rem;
 
-            padding: 17px;
+            padding: 14px;
             outline: none;
         }
-        img {
-            width: 25px;
-            margin-right: 10px;
+        i {
+            margin-right: 15px;
         }
     }
     label a {

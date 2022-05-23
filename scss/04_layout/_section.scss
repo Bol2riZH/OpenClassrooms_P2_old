@@ -57,14 +57,22 @@ section {
         @include laptopL {
             justify-content: center;
             margin: auto;
+            
         }
         .titlePopular {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
             margin: 0px 10px 30px 10px;
-            img {
-                height: 18px;
+            svg {
+                width: 8%;
+                position: absolute;
+                right: 2px;
+                bottom: 2px;
+                @include laptopL {
+                    width: 28px;
+                }
             }
         }
         .hostingPopular {

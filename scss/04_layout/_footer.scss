@@ -1,7 +1,7 @@
 //PIED DE PAGE
 footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     @include mobile-only {
         flex-direction: column;
         padding-left: 15px;

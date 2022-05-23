@@ -20,28 +20,25 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
-  width: 1440px;
   margin: auto;
-}
-@media screen and (max-width: 1440px) {
-  html {
-    width: 100%;
-    margin: auto;
-  }
 }
 
 body {
-  box-sizing: border-box;
   font-size: 1.7rem;
+}
+
+main {
+  max-width: 1440px;
+  margin: auto;
   margin-top: 30px;
 }
 @media screen and (max-width: 1440px) {
-  body {
+  main {
     margin: 30px 30px 0px 30px;
   }
 }
@@ -165,10 +162,19 @@ section aside .titlePopular {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   margin: 0px 10px 30px 10px;
 }
-section aside .titlePopular img {
-  height: 18px;
+section aside .titlePopular svg {
+  width: 8%;
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+}
+@media screen and (max-width: 1440px) {
+  section aside .titlePopular svg {
+    width: 28px;
+  }
 }
 section aside .hostingPopular {
   display: flex;
@@ -240,18 +246,17 @@ section aside .hostingPopular {
   border-top-left-radius: 1.8rem;
   border-bottom-left-radius: 1.8rem;
   background: #f2f2f2;
-  padding: 17px;
+  padding: 24px;
   font-weight: bold;
 }
 .searchHosting__form input {
   border: 0.1rem solid #f2f2f2;
   font-size: 1.7rem;
-  padding: 17px;
+  padding: 14px;
   outline: none;
 }
-.searchHosting__form img {
-  width: 25px;
-  margin-right: 10px;
+.searchHosting__form i {
+  margin-right: 15px;
 }
 .searchHosting label a {
   border-top-right-radius: 1.8rem;
@@ -296,12 +301,16 @@ section aside .hostingPopular {
 .filter__button:hover {
   animation: filterColor 250ms forwards;
 }
-.filter__button img {
-  width: 55px;
+.filter__button i {
+  align-self: center;
+  color: #0165FC;
+  background: #DDEBFF;
+  padding: 20px;
+  border-radius: 50%;
 }
 @media screen and (max-width: 599px) {
-  .filter__button img {
-    width: 20px;
+  .filter__button i {
+    padding: 5px;
   }
 }
 .filter__button a {
@@ -321,8 +330,12 @@ section aside .hostingPopular {
   display: flex;
   align-items: center;
 }
-.information img {
+.information i {
   margin-right: 15px;
+  color: #0165FC;
+  border: 0.19rem solid #bfbfbf;
+  border-radius: 50%;
+  padding: px;
 }
 
 .hostingBox {
@@ -362,6 +375,12 @@ section aside .hostingPopular {
 }
 .hostingBox__description--rate {
   display: flex;
+}
+.hostingBox__description--rate #full {
+  color: #0165FC;
+}
+.hostingBox__description--rate #empty {
+  color: #d9d9d9;
 }
 
 .popularBox {
@@ -411,6 +430,13 @@ section aside .hostingPopular {
 }
 .popularBox__description--rate {
   display: flex;
+  margin-bottom: 5px;
+}
+.popularBox__description--rate #full {
+  color: #0165FC;
+}
+.popularBox__description--rate #empty {
+  color: #d9d9d9;
 }
 
 .activityBoxBig {
@@ -556,7 +582,7 @@ header a:hover {
 
 footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 40px 0px 40px 0px;
   line-height: 40px;
 }

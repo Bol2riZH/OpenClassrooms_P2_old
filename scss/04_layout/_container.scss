@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 10px 30px;
     @include tablet {
         flex-direction: column;
         align-items: flex-start;
@@ -10,7 +11,6 @@
             width: 20px;
         }
     }
-    gap: 10px 30px;
     &__button {
         @include filterBox;
         display: flex;
@@ -18,10 +18,14 @@
         &:hover {
             animation: filterColor 250ms forwards;
         }
-        img {
-            width: 55px;
+        i {
+            align-self: center;
+            color: $color-primary;
+            background: $color-tertiary;
+            padding: 20px;
+            border-radius: 50%;
             @include mobile-only {
-                width: 20px;
+                padding: 5px;
             }
         }
         a {
@@ -41,8 +45,12 @@
 .information {
     display: flex;
     align-items: center;
-    img {
+    i {
         margin-right: 15px;
+        color: $color-primary;
+        border: .19rem solid darken($color-secondary, 20);
+        border-radius: 50%;
+        padding: px;
     }
 }
 
@@ -81,6 +89,12 @@
         }
         &--rate {
             display: flex;
+            #full {
+                color: $color-primary;
+            }
+            #empty {
+                color: darken($color-secondary, 10);
+            }
         }
     }
 }
@@ -126,6 +140,13 @@
         }
         &--rate {
             display: flex;
+            margin-bottom: 5px;
+            #full {
+                color: $color-primary;
+            }
+            #empty {
+                color: darken($color-secondary, 10);
+            }
         }
     }
 }
